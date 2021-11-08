@@ -18,9 +18,12 @@
 <body>
   <header class="header">
     <div class="container">
-      <button class="menu-btn"></button>
       <div class="nav-menu">
+        <div class="btn-container">
+          <button class="menu-btn"></button>
+        </div>
         <nav class="navbar">
+          <div class="menu-close"></div>
           <ul class="nav-list">
             <li class="nav-item">
               <a href="#">главная</a>
@@ -83,7 +86,7 @@
           театральных зданий в Европе XVIII.</p>
         <button class="playbill-btn" id="playbillBTN">афиша</button>
       </div>
-      <div class="first-screen_swiper">
+      <div class="first-screen_swiper collapse">
         <div class="swiper">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
@@ -125,7 +128,7 @@
                 <p><b>350</b> лет истории</p>
               </div>
             </div>
-            <div class="about-img">
+            <div class="about-img collapse">
               <img src="img/about-img.png" alt="theater-view" width="350">
             </div>
           </div>
@@ -244,7 +247,7 @@
             </div>
           </div>
           <div class="forms">
-            <div class="form-col">
+            <div class="form-col col-lr">
               <div class="form-input_container">
                 <input type="text" class="form-input_sm" placeholder="Имя">
                 <input type="text" class="form-input_sm" placeholder="Компания">
@@ -254,13 +257,13 @@
                 <input type="text" class="form-input_sm" placeholder="E-mail">
               </div>
             </div>
-            <div class="form-col">
+            <div class="form-col col-sm">
               <input type="text" class="form-input_lr" placeholder="Сообщение">
             </div>
-            <div class="form-col">
+            <div class="form-col col-lr">
               <p class="form-privacy">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
             </div>
-            <div class="form-col form-btn">
+            <div class="form-col form-btn col-sm">
               <button class="playbill-btn" id="playbillBTN">отправить</button>
             </div>
           </div>
