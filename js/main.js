@@ -117,13 +117,16 @@ new Swiper('.projects-swiper', {
            slidesPerView: 1.3
         },
         576: {
-           slidesPerView: 1.2
+           slidesPerView: 1.2,
+           loop: true
         },
         546: {
-           slidesPerView: 1.1
+           slidesPerView: 1.1,
+           loop: true
         },
         320: {
-           slidesPerView: 1
+           slidesPerView: 1,
+           loop: true
         }
     }
 });

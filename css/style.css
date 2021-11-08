@@ -1129,7 +1129,7 @@ header {
 	}
 }
 
-@media (max-width: 426px) {
+@media (max-width: 515px) {
 	.container {
 		max-width: 390px;
 	}
@@ -1185,7 +1185,7 @@ header {
 	}
 }
 
-@media (max-width: 376px) {
+@media (max-width: 401px) {
 	.container {
 		max-width: 350px;
 	}
@@ -1208,7 +1208,7 @@ header {
 	}
 }
 
-@media (max-width: 326px) {
+@media (max-width: 365px) {
 	.container {
 		max-width: 290px;
 	}
