@@ -27,14 +27,13 @@ menuBtnOpen.addEventListener('click', ()=>{
       phoneNumber.classList.add('opacity');
       body.classList.add('ofhd');
       menuOpen = true;
-   }
+   } 
 })
 
 menuBtnClose.addEventListener('click', ()=>{
    if(menuOpen){
       navBar.classList.remove('show');
       contIcons.classList.remove('show-icons');
-      phoneNumber.classList.remove('opacity');
       body.classList.remove('ofhd');
       menuOpen = false;
    } 
@@ -149,6 +148,9 @@ new Swiper('.partners-swiper', {
         },
         992: {
             slidesPerView: 2.5
+        },
+        768: {
+           slidesPerView: 2.5
         },
         576: {
             slidesPerView: 2

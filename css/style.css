@@ -566,6 +566,11 @@ header {
 	margin: 150px auto;
 }
 
+.projects-swiper_container {
+	display: flex;
+	justify-content: flex-end;
+}
+
 .projects-swiper {
 	overflow: hidden;
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -682,8 +687,8 @@ header {
 	margin: 0 50px;
 }
 
-.raings-body {
-	margin: 0 50px;
+.ratings-body {
+	margin: 50px 50px 0;
 }
 
 .ratings-text {
@@ -733,7 +738,7 @@ header {
 }
 
 .contacts {
-	flex: 1 0 33.33333333%;
+	flex: 1 0 20%;
 	font-family: 'Open Sans Condensed', sans-serif;
 	color: #FFFFFF;
 	font-size: 16px;
@@ -768,7 +773,6 @@ header {
 .form-col {
 	display: flex;
 	flex-wrap: wrap;
-	flex: 0 0 auto;
 	width: 50%;
 }
 
@@ -776,7 +780,6 @@ header {
 	color: #989898;
 	background: #444444;
 	border: 1px solid #616161;
-	max-width: 180px;
 	height: 35px;
 	padding: 15px;
 	outline: none;
@@ -785,8 +788,14 @@ header {
 	font-size: 12px;
 }
 
+.form-input_sm:last-child {
+	margin: 0 0 30px 0;
+}
+
 .form-input_container {
 	display: flex;
+	justify-content: flex-start;
+	width: 100%;
 }
 
 .form-privacy {
@@ -798,7 +807,6 @@ header {
 
 .form-input_lr {
 	width: 100%;
-	margin: 0 0 30px 20px;
 	color: #989898;
 	background: #444444;
 	border: 1px solid #616161;
@@ -847,6 +855,15 @@ header {
 	.fixed-panel {
 		padding: 0 63px 0 62px;
 	}
+
+	.form-input_sm {
+		width: 140px;
+	}
+
+	.form-input_lr {
+		width: 300px;
+		margin-bottom: 30px;
+	}
 }
 
 @media (max-width: 993px) {
@@ -871,12 +888,24 @@ header {
 		flex-direction: column-reverse;
 	}
 
+	.ratings-text {
+		font-size: 34px;
+	}
+
+	.fa-star {
+		font-size: 20px;
+	}
+
 	.col-lr {
 		width: 58.33333333%;
 	}
 
 	.col-sm {
 		width: 41.66666667%;
+	}
+
+	.partners-swiper_container {
+		max-width: 95%;
 	}
 
 	.contacts {
@@ -1026,6 +1055,10 @@ header {
 		margin: 0 0 0 20px;
 	}
 
+	.partners-swiper_container {
+		max-width: 95%;
+	}
+
 	.contacts {
 		margin-top: 60px;
 	}
@@ -1053,7 +1086,7 @@ header {
 	.nav-list li {
 		margin-bottom: 15px;
 	}
-	
+
 	.contacts-icons {
 		bottom: 30px;
 	}
@@ -1091,6 +1124,19 @@ header {
 		justify-content: space-around;
 	}
 
+	.ratings-text {
+		font-size: 25px;
+	}
+
+	.years {
+		margin: 0 12px;
+	}
+
+	.ratings-body {
+		margin: 0 0 0 12px;
+		padding-top: 35px;
+	}
+
 	.about-text-title {
 		flex: 1 1 100%;
 	}
@@ -1100,23 +1146,17 @@ header {
 		flex-direction: column;
 	}
 
-	.forms {
-		flex-direction: column;
-		align-items: center;
-	}
-
 	.col-lr {
 		width: 100%;
 	}
 
 	.form-input_sm {
-		max-width: 230px;
-		width: 230px;
-		margin: 15px 0;
+		flex: 1 1 50%;
+		margin: 0 25px 30px 0;
 	}
 
-	.form-input_sm:first-child {
-		margin-right: 49px;
+	.form-input_sm:last-child {
+		margin: 0 0 30px 25px;
 	}
 
 	.col-sm {
@@ -1126,7 +1166,13 @@ header {
 
 	.form-input_lr {
 		margin: 15px 0;
+		width: 100%;
 	}
+
+	.form-input_container {
+		justify-content: space-between;
+	}
+
 }
 
 @media (max-width: 515px) {
@@ -1139,32 +1185,24 @@ header {
 	}
 
 	.ratings-container {
-		flex-direction: column;
-		text-align: center;
 		padding: 50px 0;
 	}
 
 	.years {
 		font-size: 50px;
-		display: flex;
 	}
 
 	.year {
 		margin: 0 10px;
 	}
 
+	.fa-star {
+		font-size: 16px;
+		margin-right: 10px;
+	}
+
 	.raings-body {
 		margin: 15px auto;
-	}
-
-	.ratings-text {
-		font-size: 28px;
-	}
-
-	.form-input_container {
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
 	}
 
 	.form-input_sm {
@@ -1201,6 +1239,10 @@ header {
 	.footer-container {
 		padding: 10px 0;
 		font-size: 8px;
+	}
+
+	.ratings-text {
+		font-size: 20px;
 	}
 
 	.contacts {
