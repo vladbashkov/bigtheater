@@ -64,47 +64,11 @@ new Swiper('.projects-swiper', {
         1920: {
            slidesPerView: 4
         },
-        1850: {
-           slidesPerView: 3.8
-        },
-        1750: {
-           slidesPerView: 3.5
-        },
-        1650: {
-           slidesPerView: 3.3
-        },
-        1550: {
-           slidesPerView: 3.1
-        },
-        1450: {
-           slidesPerView: 2.8
-        },
-        1350: {
-           slidesPerView: 2.6
-        },
         1250: {
            slidesPerView: 2.4
         },
-        1150: {
-           slidesPerView: 2.3
-        },
-        1050: {
-           slidesPerView: 2.2
-        },
         992: {
-           slidesPerView: 2
-        },
-        950: {
-           slidesPerView: 1.9,
-        },
-        900: {
-           slidesPerView: 1.8
-        },
-        850: {
-           slidesPerView: 1.7
-        },
-        800: {
-           slidesPerView: 1.6
+           slidesPerView: 1.5
         },
         750: {
            slidesPerView: 1.5
@@ -119,11 +83,7 @@ new Swiper('.projects-swiper', {
            slidesPerView: 1.2,
            loop: true
         },
-        546: {
-           slidesPerView: 1.1,
-           loop: true
-        },
-        320: {
+        375: {
            slidesPerView: 1,
            loop: true
         }
@@ -143,27 +103,27 @@ new Swiper('.partners-swiper', {
         1440: {
             slidesPerView: 4
         },
-        1259: {
-            slidesPerView: 3
+        1024: {
+           slidesPerView: 3
         },
         992: {
-            slidesPerView: 2.5
-        },
-        768: {
-           slidesPerView: 2.5
-        },
-        576: {
             slidesPerView: 2
         },
+        768: {
+           slidesPerView: 1.8
+        },
+        576: {
+            slidesPerView: 1.5
+        },
         425: {
-           slidesPerView: 1.5
+           slidesPerView: 1.2
         },
         380: {
-            slidesPerView: 1.3
+            slidesPerView: 1.1
         },
-        320: {
-           slidesPerView: 1.1
-        },
+        300: {
+           slidesPerView: 1
+        }
     }
 });
 

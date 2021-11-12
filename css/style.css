@@ -247,8 +247,15 @@ header {
 }
 
 .container {
-	max-width: 1110px;
+	max-width: 1100px;
 	margin: 0 auto;
+}
+
+.navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 1100px;
 }
 
 .navbar {
@@ -260,6 +267,8 @@ header {
 
 .phone-number {
 	transition: 0.45s ease-in-out;
+	min-width: 140px;
+	padding: 50px 0 20px 0;
 }
 
 .phone {
@@ -278,20 +287,15 @@ header {
 	margin-right: 63px;
 }
 
-.nav-list li:last-child {
-	margin-right: 0;
-}
-
 .nav-menu {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 0 200px;
 	transition: .5s ease-in-out;
 	z-index: 5;
 }
@@ -336,9 +340,8 @@ header {
 	top: 0;
 	left: 0;
 	height: 100%;
-	max-width: 150px;
 	background: rgba(51, 51, 51, 0.75);
-	padding: 0 63px 160px 62px;
+	padding: 0 45px 160px 45px;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -348,8 +351,8 @@ header {
 .contacts-text {
 	text-transform: uppercase;
 	transform: rotate(-90deg);
-	position: relative;
-	bottom: 110px;
+	position: absolute;
+	top: 305px;
 	color: #C4C4C4;
 	font-size: 18px;
 	font-weight: 700;
@@ -434,7 +437,7 @@ header {
 }
 
 .first-screen_swiper {
-	margin-left: 125px;
+	margin: 0 30px 0 125px;
 }
 
 .swiper {
@@ -514,7 +517,6 @@ header {
 
 .about-container {
 	display: flex;
-	margin: 0 50px;
 }
 
 .about-text {
@@ -738,13 +740,14 @@ header {
 }
 
 .contacts {
-	flex: 1 0 20%;
+	flex: 1 0 23%;
 	font-family: 'Open Sans Condensed', sans-serif;
 	color: #FFFFFF;
 	font-size: 16px;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	margin-right: 50px;
 }
 
 .contacts-container {
@@ -764,59 +767,63 @@ header {
 }
 
 .forms {
-	flex: 1 0 66.66666667%;
+	max-width: 730px;
 	color: #989898;
-	display: flex;
-	flex-wrap: wrap;
 }
 
-.form-col {
+.form-row {
 	display: flex;
-	flex-wrap: wrap;
-	width: 50%;
+	align-items: center;
+	height: 100px;
+	margin-bottom: 30px;
 }
 
-.form-input_sm {
-	color: #989898;
+.form-style {
+	outline: none;
 	background: #444444;
 	border: 1px solid #616161;
-	height: 35px;
-	padding: 15px;
-	outline: none;
-	margin: 0 30px 30px 0;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 12px;
+	color: #989898;
+	padding: 10px 15px;
 }
 
-.form-input_sm:last-child {
-	margin: 0 0 30px 0;
-}
-
-.form-input_container {
+.form-input {
 	display: flex;
-	justify-content: flex-start;
+}
+
+.input {
+	margin: 0 30px 30px 0;
+	height: 35px;
+}
+
+.input:last-child {
+	margin: 0 30px 0 0;
+}
+
+.form-textarea {
 	width: 100%;
+	height: 100px;
+	max-width: 310px;
+}
+
+.textarea {
+	resize: none;
+	width: 100%;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .form-privacy {
 	margin-top: 10px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 12px;
+	letter-spacing: 1.2px;
 	line-height: 20px;
-}
-
-.form-input_lr {
-	width: 100%;
-	color: #989898;
-	background: #444444;
-	border: 1px solid #616161;
-	outline: none;
-	padding: 15px 15px 65px 15px;
 }
 
 .form-btn {
 	display: flex;
 	justify-content: flex-end;
+	margin-left: 150px;
 }
 
 .footer-container {
@@ -829,22 +836,43 @@ header {
 	color: #989898;
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 1299px){
 	.container {
-		max-width: 899px;
+		max-width: 900px;
+	}
+
+	.navbar {
+		padding: 50px 0 20px 0;
+		width: 100%;
+	}
+
+	.nav-list li {
+		margin-right: 30px;
+		font-size: 14px;
+	}
+
+	.nav-list li:last-child {
+		margin-right: 0;
 	}
 
 	.welcome-container {
-		margin-left: 170px;
+		margin-left: 140px;
+	}
+}
+
+@media (max-width: 993px) {
+
+	.container {
+		max-width: 690px;
+	}
+
+	.welcome-container {
+		margin: 0 auto;
 	}
 
 	.collapse {
 		display: none;
 		visibility: hidden;
-	}
-
-	.phone-number {
-		margin: 5px 100px 10px 100px;
 	}
 
 	.nav-menu {
@@ -853,96 +881,13 @@ header {
 	}
 
 	.fixed-panel {
-		padding: 0 63px 0 62px;
-	}
-
-	.form-input_sm {
-		width: 140px;
-	}
-
-	.form-input_lr {
-		width: 300px;
-		margin-bottom: 30px;
-	}
-}
-
-@media (max-width: 993px) {
-	.container {
-		max-width: 690px;
-	}
-
-	.nav-list li {
-		margin-right: 30px;
-		font-size: 14px;
-	}
-
-	.projects-swiper_container {
-		margin: 100px auto;
-	}
-
-	.projects-swiper {
-		margin: 0 50px;
-	}
-
-	.mecenat-container {
-		flex-direction: column-reverse;
-	}
-
-	.ratings-text {
-		font-size: 34px;
-	}
-
-	.fa-star {
-		font-size: 20px;
-	}
-
-	.col-lr {
-		width: 58.33333333%;
-	}
-
-	.col-sm {
-		width: 41.66666667%;
-	}
-
-	.partners-swiper_container {
-		max-width: 95%;
-	}
-
-	.contacts {
-		display: flex;
-	}
-
-	.contacts-container {
-		width: 50%;
-	}
-
-	.contacts-container:last-child {
-		text-align: end;
-	}
-}
-
-@media (max-width: 769px) {
-	.container {
-		max-width: 590px;
-	}
-
-	.welcome-container {
-		margin: 0 auto;
-	}
-
-	header {
-		margin-bottom: 90px;
-		padding: 150px 0;
+		left: -400px;
+		transition: .5s ease-in-out;
 	}
 
 	.collapse-tb {
 		display: none;
 		visibility: hidden;
-	}
-
-	.fixed-panel {
-		left: -400px;
-		transition: .5s ease-in-out;
 	}
 
 	.contacts-icons {
@@ -972,30 +917,6 @@ header {
 	}
 
 	.navbar {
-		padding: 20px 0;
-	}
-
-	.phone-number {
-		position: absolute;
-		top: 56px;
-		right: 39px;
-		margin: 0;
-	}
-
-	.about-theatre .container {
-		margin: 0 40px;
-		max-width: 100%;
-	}
-
-	.about-container {
-		margin: 0;
-	}
-
-	.about-numbers {
-		margin-right: 0;
-	}
-
-	.navbar {
 		position: absolute;
 		top: 0;
 		left: -400px;
@@ -1004,27 +925,12 @@ header {
 		background: #333333;
 	}
 
-	.show {
-		left: 0;
-	}
-
-	.nav-list {
-		display: block;
-		text-align: left;
-		margin: 70px 0 0 40px;
-	}
-
-	.nav-list li {
-		font-size: 24px;
-		margin-bottom: 15px;
-	}
-
-	.partners {
-		margin: 90px 0;
-	}
-
-	.projects {
-		margin: 90px auto;
+	.phone-number {
+		position: absolute;
+		top: 56px;
+		right: 39px;
+		margin: 0;
+		padding: 0;
 	}
 
 	.menu-btn {
@@ -1050,21 +956,20 @@ header {
 		display: block;
 	}
 
-	.col-sm {
-		width: 37.666667%;
-		margin: 0 0 0 20px;
+	.show {
+		left: 0;
 	}
 
-	.partners-swiper_container {
-		max-width: 95%;
+	.nav-list {
+		display: block;
+		text-align: left;
+		margin: 70px 0 0 40px;
+		flex-direction: column;
 	}
 
-	.contacts {
-		margin-top: 60px;
-	}
-
-	.mecenat {
-		margin-bottom: 60px;
+	.nav-list li {
+		font-size: 24px;
+		margin-bottom: 20px;
 	}
 
 	.opacity {
@@ -1072,11 +977,153 @@ header {
 		visibility: hidden;
 		right: -100px;
 	}
+
+	-------------
+
+	.navbar-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.contacts-text {
+		top: 230px;
+	}
+
+	.projects-swiper_container {
+		margin: 100px auto;
+	}
+
+	.projects-swiper {
+		margin: 0 50px;
+	}
+
+	.mecenat-container {
+		flex-direction: column-reverse;
+	}
+
+	.ratings-text {
+		font-size: 34px;
+	}
+
+	.fa-star {
+		font-size: 20px;
+	}
+
+	.contacts {
+		display: flex;
+	}
+
+	.contacts-container {
+		width: 50%;
+	}
+
+	.contacts-container:last-child {
+		text-align: end;
+	}
+}
+
+@media (max-width: 769px) {
+	.container {
+		max-width: 510px;
+	}
+
+	.welcome-container {
+		margin: 0 auto;
+	}
+
+	header {
+		margin-bottom: 90px;
+		padding: 150px 0;
+	}
+
+	.about-theatre .container {
+		margin: 0 40px;
+		max-width: 100%;
+	}
+
+	.about-container {
+		margin: 0;
+	}
+
+	.about-numbers {
+		margin-right: 0;
+	}
+
+	.nav-list li {
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+
+	.partners {
+		margin: 90px 0;
+	}
+
+	.projects {
+		margin: 90px auto;
+	}
+
+	.years {
+		margin: 0 20px
+	}
+
+	.ratings-body {
+		margin: 0 15px;
+	}
+
+	.ratings-text {
+		font-size: 25px;
+	}
+
+	.form-row {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.form-col {
+		max-width: 230px;
+	}
+
+	.form-textarea {
+		width: 510px;
+		max-width: 510px;
+	}
+
+	.textarea {
+		height: 100px;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.form-input {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.input {
+		margin: 0 0 30px 0;
+		width: 100%;
+	}
+
+	.input:last-child {
+		margin: 0 0 30px 0;
+	}
+
+	.contacts {
+		margin: 0;
+		font-size: 12px;
+	}
+
+	.form-btn {
+		margin-left: 0;
+	}
+
+	.mecenat {
+		margin-bottom: 30px;
+	}
 }
 
 @media (max-width: 577px) {
 	.container {
-		max-width: 510px;
+		max-width: 410px;
 	}
 
 	.nav-list {
@@ -1146,40 +1193,6 @@ header {
 		flex-direction: column;
 	}
 
-	.col-lr {
-		width: 100%;
-	}
-
-	.form-input_sm {
-		flex: 1 1 50%;
-		margin: 0 25px 30px 0;
-	}
-
-	.form-input_sm:last-child {
-		margin: 0 0 30px 25px;
-	}
-
-	.col-sm {
-		width: 100%;
-		margin: 0;
-	}
-
-	.form-input_lr {
-		margin: 15px 0;
-		width: 100%;
-	}
-
-	.form-input_container {
-		justify-content: space-between;
-	}
-
-}
-
-@media (max-width: 515px) {
-	.container {
-		max-width: 390px;
-	}
-
 	.title {
 		font-size: 48px;
 	}
@@ -1205,17 +1218,12 @@ header {
 		margin: 15px auto;
 	}
 
-	.form-input_sm {
-		width: 100%;
-		max-width: 100%;
-	}
-
 	.form-col {
-		justify-content: center;
+		max-width: 190px;
 	}
 
-	.form-input_sm:first-child {
-		margin-right: 0;
+	.form-textarea {
+		max-width: 410px;
 	}
 
 	.contacts a:last-child {
@@ -1223,12 +1231,16 @@ header {
 	}
 }
 
-@media (max-width: 401px) {
+@media (max-width: 439px) {
 	.container {
-		max-width: 350px;
+		max-width: 300px;
 	}
 
 	.title {
+		font-size: 42px;
+	}
+
+	.content-title {
 		font-size: 42px;
 	}
 
@@ -1245,18 +1257,24 @@ header {
 		font-size: 20px;
 	}
 
+	.form-col {
+		max-width: 130px;
+	}
+
+	.form-textarea {
+		max-width: 300px;
+	}
+
+	.form-privacy {
+		font-size: 8px;
+	}
+
 	.contacts {
 		font-size: 12px;
 	}
-}
-
-@media (max-width: 365px) {
-	.container {
-		max-width: 290px;
-	}
 
 	.phone-number {
-		right: 100px;
+		right: 40px;
 	}
 
 	.title {
@@ -1269,5 +1287,32 @@ header {
 
 	.years {
 		font-size: 42px;
+	}
+}
+
+@media (max-width: 321px) {
+	.container {
+		max-width: 280px;
+	}
+
+	header {
+		margin-bottom: 40px;
+	}
+
+	.phone-number {
+		right: 40px;
+	}
+
+	.content-title {
+		font-size: 35px;
+	}
+
+	.fa-star {
+		font-size: 14px;
+		margin-right: 8px;
+	}
+
+	.form-textarea {
+		max-width: 280px;
 	}
 }

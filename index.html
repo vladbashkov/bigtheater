@@ -17,38 +17,38 @@
 
 <body>
   <header class="header">
-    <div class="container">
       <div class="nav-menu">
         <div class="btn-container">
           <button class="menu-btn"></button>
         </div>
-        <nav class="navbar">
-          <div class="menu-close"></div>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#">главная</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about-theatre">о театре</a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects">наши постановки</a>
-            </li>
-            <li class="nav-item">
-              <a href="#partners">партнеры театра</a>
-            </li>
-            <li class="nav-item">
-              <a href="#mecenat">контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="phone-number">
-          <span class="phone">
-            <a href="tel:+74951234567">+7 495 123-45-67</a>
-          </span>
+        <div class="navbar-container container">
+          <nav class="navbar">
+            <div class="menu-close"></div>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#">главная</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about-theatre">о театре</a>
+              </li>
+              <li class="nav-item">
+                <a href="#projects">наши постановки</a>
+              </li>
+              <li class="nav-item">
+                <a href="#partners">партнеры театра</a>
+              </li>
+              <li class="nav-item">
+                <a href="#mecenat">контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="phone-number">
+            <span class="phone">
+              <a href="tel:+74951234567">+7 495 123-45-67</a>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
     <div class="fixed-panel">
       <div class="contacts-text">
         <p>контактная информация</p>
@@ -198,38 +198,40 @@
       </div>
       <div class="partners" id="partners">
         <h2 class="content-title"><b>партнеры </b>театра</h2>
-        <div class="partners-swiper_container container">
-          <div class="partners-swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img src="img/logo.svg" alt="logo">
+        <div class="container">
+          <div class="partners-swiper_container">
+            <div class="partners-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/logo.svg" alt="logo">
+                </div>
               </div>
-              <div class="swiper-slide">
-                <img src="img/logo.svg" alt="logo">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/logo.svg" alt="logo">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/logo.svg" alt="logo">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/logo.svg" alt="logo">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/logo.svg" alt="logo">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/logo.svg" alt="logo">
-              </div>
-              <div class="swiper-slide">
-                <img src="img/logo.svg" alt="logo">
-              </div>
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
             </div>
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
           </div>
         </div>
       </div>
@@ -247,24 +249,28 @@
             </div>
           </div>
           <div class="forms">
-            <div class="form-col col-lr">
-              <div class="form-input_container">
-                <input type="text" class="form-input_sm" placeholder="Имя">
-                <input type="text" class="form-input_sm" placeholder="Компания">
+            <div class="form-row">
+              <div class="form-input">
+                <div class="form-col">
+                  <input type="text" class="input form-style" placeholder="Имя">
+                  <input type="text" class="input form-style" placeholder="Телефон">
+                </div>
+                <div class="form-col">
+                  <input type="text" class="input form-style" placeholder="Компания">
+                  <input type="text" class="input form-style" placeholder="E-mail">
+                </div>
               </div>
-              <div class="form-input_container">
-                <input type="text" class="form-input_sm" placeholder="Телефон">
-                <input type="text" class="form-input_sm" placeholder="E-mail">
+              <div class="form-textarea">
+                <textarea placeholder="Сообщение" class="textarea form-style"></textarea>
               </div>
             </div>
-            <div class="form-col col-sm">
-              <input type="text" class="form-input_lr" placeholder="Сообщение">
-            </div>
-            <div class="form-col col-lr">
-              <p class="form-privacy">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
-            </div>
-            <div class="form-col form-btn col-sm">
-              <button class="playbill-btn" id="playbillBTN">отправить</button>
+            <div class="form-row">
+              <div class="col-lr">
+                <p class="form-privacy">* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</p>
+              </div>
+              <div class="form-btn col-sm">
+                <button class="playbill-btn" id="playbillBTN">отправить</button>
+              </div>
             </div>
           </div>
         </div>
