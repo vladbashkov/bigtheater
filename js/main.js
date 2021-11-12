@@ -3,18 +3,20 @@ const body = document.querySelector('body'),
    navBar = document.querySelector('.navbar'),
    contIcons = document.querySelector('.contacts-icons'),
    phoneNumber = document.querySelector('.phone-number'),
-   menuBtnOpen = document.querySelector('.menu-btn'),
+   menuBtnOpen = document.querySelector('.btn-container'),
    menuBtnClose = document.querySelector('.menu-close');
 
 window.onscroll = function () {
     if(scrollY > 100) {
         navMenu.classList.add('navBackground');
         navBar.classList.add('navbarPadding');
+        phoneNumber.classList.add('navbarPadding');
         phoneNumber.classList.add('opacity');
     }
     else if(scrollY < 100){
         navMenu.classList.remove("navBackground");
         navBar.classList.remove('navbarPadding');
+        phoneNumber.classList.remove('navbarPadding');
         phoneNumber.classList.remove('opacity');
     }
 }

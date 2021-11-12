@@ -222,8 +222,10 @@ header {
 
 .menu-close {
 	position: absolute;
-	top: 73px;
+	top: 52px;
 	left: 225px;
+	width: 40px;
+	height: 40px;
 }
 
 .menu-close::after {
@@ -232,7 +234,7 @@ header {
 	width: 40px;
 	height: 3px;
 	background-color: #fff;
-	transform: rotate(45deg);
+	transform: rotate(45deg) translate(13px, 13px);
 	position: absolute;
 }
 
@@ -242,7 +244,7 @@ header {
 	width: 40px;
 	height: 3px;
 	background-color: #fff;
-	transform: rotate(-45deg);
+	transform: rotate(-45deg) translate(-13px, 13px);
 	position: absolute;
 }
 
@@ -268,7 +270,6 @@ header {
 .phone-number {
 	transition: 0.45s ease-in-out;
 	min-width: 140px;
-	padding: 50px 0 20px 0;
 }
 
 .phone {
@@ -302,10 +303,6 @@ header {
 
 .navBackground {
 	background-color: rgba(51, 51, 51, 0.75);
-}
-
-.navbarPadding {
-	padding: 20px 0;
 }
 
 .nav-item a,
@@ -346,6 +343,7 @@ header {
 	align-items: center;
 	justify-content: flex-end;
 	flex-direction: column;
+	transition: 0.5s ease-in-out;
 }
 
 .contacts-text {
@@ -836,6 +834,10 @@ header {
 	color: #989898;
 }
 
+.navbarPadding {
+	padding: 20px 0;
+}
+
 @media (max-width: 1299px){
 	.container {
 		max-width: 900px;
@@ -849,6 +851,14 @@ header {
 	.nav-list li {
 		margin-right: 30px;
 		font-size: 14px;
+	}
+
+	.phone-number {
+		padding: 50px 0 20px 0;
+	}
+
+	.navbarPadding {
+		padding: 20px 0;
 	}
 
 	.nav-list li:last-child {
@@ -893,9 +903,6 @@ header {
 	.contacts-icons {
 		left: -400px;
 		transition: .5s ease-in-out;
-	}
-
-	.contacts-icons {
 		width: 150px;
 		display: flex;
 		flex-wrap: wrap;
@@ -977,8 +984,6 @@ header {
 		visibility: hidden;
 		right: -100px;
 	}
-
-	-------------
 
 	.navbar-container {
 		display: flex;
